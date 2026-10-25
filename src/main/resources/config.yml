@@ -1,0 +1,45 @@
+# ============================================
+#  Sculk Ward - configuración
+#  Después de editar usa /sculkward reload
+# ============================================
+
+recipes:
+  # Si lo pones en false las piezas solo se consiguen con /sculkward give
+  enabled: true
+
+armor:
+  toughness: 3.5            # Dureza de armadura por pieza (netherite = 3.0)
+  knockback-resistance: 0.1 # Resistencia al empuje por pieza (netherite = 0.1)
+  points:                   # Puntos de armadura por pieza (netherite = 3 / 8 / 6 / 3)
+    helmet: 3
+    chestplate: 8
+    leggings: 6
+    boots: 3
+
+set-bonus:
+  enabled: true
+  resistance-level: 1       # 0 = sin Resistencia, 1 = Resistencia I, 2 = Resistencia II...
+  night-vision: true        # Visión nocturna con el set completo
+  darkness-immunity: true   # Inmunidad al efecto Oscuridad del Warden
+  warden-ignores-wearer: true # Los Warden no te eligen como objetivo (mejor esfuerzo)
+
+sonic-boom:
+  enabled: true
+  require-sneak: true       # Agacharse + clic derecho con la espada
+  require-full-set: true    # Necesita las 4 piezas de armadura puestas
+  cooldown-seconds: 15
+  damage: 10.0              # 10 = 5 corazones
+  range: 16
+  knockback: 1.5
+
+messages:
+  prefix: "&3[&bSculkWard&3] &7"
+  no-permission: "&cNo tienes permiso para usar este comando."
+  player-not-found: "&cEl jugador &f{player} &cno está conectado."
+  unknown-item: "&cNo existe ese ítem. Usa &f/sculkward list &cpara ver los disponibles."
+  given: "Le diste &b{item} &7a &f{player}&7."
+  received: "Recibiste &b{item}&7."
+  reloaded: "Configuración y recetas recargadas."
+  usage-give: "&cUso: &f/sculkward give <jugador> <ítem|set|tools|all> [cantidad]"
+  needs-set: "&cNecesitas el set completo Sculk Ward para usar el Sonic Boom."
+  cooldown: "&cSonic Boom en enfriamiento: &f{seconds}s"
